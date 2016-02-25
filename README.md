@@ -5,7 +5,7 @@
 $ npm install --save MODULE_NAME
 ```
 
-## Configuration
+## Usage
 ```js
 const MODULE_CONST_NAME = require('MODULE_NAME');
 
@@ -17,12 +17,12 @@ const MODULE_CONST_NAME = require('MODULE_NAME');
 MODULE_CONST_NAME.myCustomInstance = MODULE_CONST_NAME({ someOption: true });
 // freeing memory: delete MODULE_CONST_NAME.myCustomInstance
 
-// ES5: injecting Promise dependency
-var Promise = require('my-promise-lib');
-var MODULE_CONST_NAME = require('MODULE_NAME')({ Promise: Promise });
+// if Promise isn't defined
+global.Promise = require('promise-module');
+var MODULE_CONST_NAME = require('MODULE_NAME');
 ```
 
-## TODO usage example
+### TODO usage example
 ```js
 ```
 
